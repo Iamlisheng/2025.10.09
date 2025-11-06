@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -7,9 +7,7 @@ using System.Windows.Media;
 
 namespace _2025_WpfApp2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         Dictionary<string, int> drinks = new Dictionary<string, int>();
@@ -21,10 +19,10 @@ namespace _2025_WpfApp2
         {
             InitializeComponent();
 
-            //讀取飲料品項drinkitem.csv
+            
             InputDrinkItem(drinks);
 
-            //動態產生飲料選單
+            
             DisplayDrinkMenu(drinks);
         }
 
@@ -179,7 +177,7 @@ namespace _2025_WpfApp2
 
             Result_TextBlock.Text = result_message;
 
-            //將訂單內容存成一個文字檔
+            
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "儲存訂單內容";
             saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
